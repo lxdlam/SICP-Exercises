@@ -5,8 +5,8 @@
 
 (define (find-divisor n test-divisor)
   (cond ((> (square test-divisor) n) n)
-        ((divides? test-divisor n) test-divisor)
-        (else (find-divisor n (+ test-divisor 1)))))
+    ((divides? test-divisor n) test-divisor)
+    (else (find-divisor n (+ test-divisor 1)))))
 
 (define (divides? a b)
   (= (remainder b a) 0))
@@ -25,13 +25,13 @@
 ;; from http://sicp.readthedocs.io/en/latest/chp1/22.html
 (define (continue-primes n count)
   (cond ((= count 0) (display "are primes."))
-        ((prime? n) (display n) (newline) (continue-primes (next-odd n) (- count 1)))
-        (else (continue-primes (next-odd n) count))))
+    ((prime? n) (display n) (newline) (continue-primes (next-odd n) (- count 1)))
+    (else (continue-primes (next-odd n) count))))
 
 ;; search-for-primes
 ;; from http://sicp.readthedocs.io/en/latest/chp1/22.html
 
 (define (search-for-primes n)
   (let ((start-time (real-time-clock)))
-       (continue-primes n 3)
-       (- (real-time-clock) start-time)))
+    (continue-primes n 3)
+    (- (real-time-clock) start-time)))

@@ -6,8 +6,8 @@
     (newline)
     (let ((next (f guess)))
       (if (close-enough? guess next)
-          next
-          (try next))))
+	  next
+	  (try next))))
   (try first-guess))
 
 ;; From book

@@ -15,6 +15,6 @@
 (define (count-frac n d k)
   (define (iter result count)
     (if (= count 0)
-        result
-        (iter (/ (n count) (+ (d count) result)) (- count 1))))
+	result
+	(iter (/ (n count) (+ (d count) result)) (- count 1))))
   (iter 0 k))

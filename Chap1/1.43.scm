@@ -13,8 +13,8 @@
 (define (repeated f times)
   (define (iter fc count)
     (if (= count times)
-        (lambda (x) (fc x))
-        (iter (compose f fc) (+ count 1))))
+	(lambda (x) (fc x))
+	(iter (compose f fc) (+ count 1))))
   (iter f 1))
 
 ;; ((repeated square 2) 5)

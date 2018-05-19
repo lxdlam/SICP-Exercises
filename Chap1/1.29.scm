@@ -4,6 +4,6 @@
     (if (even? n) 2 4))
   (define (sum a count)
     (cond ((= count n) (f a))
-          ((= count 0) (+ (sum (+ a h) (+ count 1)) (f a)))
-          (else (+ (sum (+ a h) (+ count 1)) (* (next count) (f a))))))
+      ((= count 0) (+ (sum (+ a h) (+ count 1)) (f a)))
+      (else (+ (sum (+ a h) (+ count 1)) (* (next count) (f a))))))
   (* (/ h 3) (sum a 0)))

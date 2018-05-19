@@ -1,17 +1,17 @@
 (define (expmod base exp m)
   (cond ((= exp 0) 1)
-        ((even? exp)
-          (remainder (square (expmod base (/ exp 2) m)) m))
-        (else 
-          (remainder (* base (expmod base (- exp 1) m)) m))))
+    ((even? exp)
+     (remainder (square (expmod base (/ exp 2) m)) m))
+    (else 
+      (remainder (* base (expmod base (- exp 1) m)) m))))
 
 (define (check n)
   (mod-check (- n 1) n))
 
 (define (mod-check a n)
   (cond ((= a 1) true)
-        ((= (expmod a n n) a) (mod-check (- a 1) n))
-        (else false)))
+    ((= (expmod a n n) a) (mod-check (- a 1) n))
+    (else false)))
 
 ;; Result
 ;; Carmichael Number

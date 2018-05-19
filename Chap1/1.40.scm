@@ -5,14 +5,14 @@
   (define (try guess)
     (let ((next (f guess)))
       (if (close-enough? guess next)
-          next
-          (try next))))
+	  next
+	  (try next))))
   (try first-guess))
 
 (define (deriv g)
   (lambda (x) (/ (- (g (+ x 0.000001))
-                    (g x))
-                 0.000001)))
+		    (g x))
+		 0.000001)))
 
 (define (newton-transform g)
   (lambda (x) (- x (/ (g x) ((deriv g) x)))))
