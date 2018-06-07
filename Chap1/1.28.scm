@@ -27,10 +27,10 @@
     (else false)))
 
 ;; Result
-;; Carmichael Number
+;; Carmichael number
 ;; 561 1105 1729 2465 2821 6601
 ;; #f   #f   #f   #f   #f   #f
-;; Prime numer
+;; Prime number
 ;; 2  3  5  7
 ;; #t #t #t #t
 ;; Non-prime number
